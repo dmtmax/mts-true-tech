@@ -29,6 +29,7 @@ public class SchedulService {
 
     @Scheduled(fixedRateString = "${application.schedule-rate}", timeUnit = TimeUnit.SECONDS, initialDelay = 0)
     public void task() {
+        log.info("calculating");
         calculate();
     }
 
