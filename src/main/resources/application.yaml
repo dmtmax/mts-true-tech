@@ -1,0 +1,22 @@
+spring:
+  application:
+    name:
+      mts-true-tech
+
+  cloud:
+    openfeign:
+      client:
+        config:
+          client:
+            url: https://mts-olimp-cloud.codenrock.com/api
+            connect-timeout: 10000
+            read-timeout: 10000
+            logger-level: basic
+
+application:
+  schedule-rate: ${SCHEDULE_RATE:60}
+  base-url: ${BASE_URL:https://lcdev-cloud.codenrock.com/api}
+  token: ${TOKEN:rbtrzrfXzFsBr8zlhAyc8TAIw7aY4cDU}
+  cpu-load-max: ${CPU_LOAD_MAX:75}
+  memory-load-max: ${MEMORY_LOAD_MAX:75}
+  delta: ${DELTA:10}
